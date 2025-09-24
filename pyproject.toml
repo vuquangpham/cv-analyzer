@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Example project for Python"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pdfplumber>=0.11.7",
+    "pymupdf>=1.26.4",
+]
 
 # Scripts
 [project.scripts]
