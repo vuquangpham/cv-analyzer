@@ -1,0 +1,4 @@
+pdf_processing:
+  ocr_enabled: true
+  ocr_language: "eng"
+  text_extraction_method: "auto"  # pymupdf, pdfplumber, auto
