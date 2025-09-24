@@ -1,0 +1,39 @@
+[project]
+name = "python-project"
+version = "0.1.0"
+description = "Example project for Python"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+# Scripts
+[project.scripts]
+start = "app.main:main"
+dev = "app.dev:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/app"]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "mypy>=1.16.0",
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.13",
+    "watchfiles>=1.0.5",
+]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+# If 3rd-party libs are missing stubs, start with this and tighten later:
+ignore_missing_imports = true
