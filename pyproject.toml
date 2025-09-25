@@ -1,7 +1,7 @@
 [project]
-name = "python-project"
+name = "cv-analyzer"
 version = "0.1.0"
-description = "Example project for Python"
+description = "CV Analyzer"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
